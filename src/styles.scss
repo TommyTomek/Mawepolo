@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+*, *::before, *::after { 
+  box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100dvh;
+  width: 100dvw;
+  background-color: grey;
+  font-size: var(--font-size-md);
+}
+
+:root {
+  /* =========================================
+     FONT SIZE SCALE — MaWePolo Design System
+     ========================================= */
+
+  --font-size-xs: 0.75rem;   /* ~12px — captions, footnotes */
+  --font-size-sm: 0.875rem;  /* ~14px — small text */
+  --font-size-md: 1rem;      /* ~16px — body text */
+  --font-size-lg: 1.125rem;  /* ~18px — subtitles */
+  --font-size-xl: 1.25rem;   /* ~20px — section headers */
+  --font-size-xxl: 1.5rem;   /* ~24px — page titles */
+  --font-size-logo: 1.75rem; /* ~28px — navbar logo/menu */
+
+  /* =========================================
+     PRIMARY BRAND COLORS
+     ========================================= */
+  --color-red-veneto: #C8102E;
+  --color-yellow-leone: #F2C438;
+  --color-white: #FFFFFF;
+  --color-bg: #fefbee;
+
+  /* =========================================
+     SECONDARY COLORS
+     ========================================= */
+  --color-magenta-malopolska: #D63C8D;
+  --color-blue-malopolska: #2F60A3;
+  --color-azure-malopolska: #53B4E8;
+  --color-green-malopolska: #7CB342;
+
+  /* =========================================
+     SUPPORT COLORS
+     ========================================= */
+  --color-brown-leone: #C69C6D;
+  --color-blue-night: #0F1A3C;
+
+  /* =========================================
+     TYPOGRAPHY
+     ========================================= */
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+
+  --font-weight-title: 700;       /* Montserrat Bold */
+  --font-weight-subtitle: 600;    /* Montserrat SemiBold */
+  --font-weight-text: 400;        /* Montserrat Regular */
+
+  /* =========================================
+     SPACING & LAYOUT
+     (You can adjust these based on design system)
+     ========================================= */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  --border-radius: 8px;
+
+  /* Logo safe area (based on height of "M") */
+  --logo-safe-margin: 1em;
+
+  /* =========================================
+     COMPONENT COLORS (optional helpers)
+     ========================================= */
+  --color-cta: var(--color-red-veneto);
+  --color-accent: var(--color-yellow-leone);
+  --color-background: var(--color-white);
+  --color-text-primary: var(--color-blue-night);
+  --color-text-light: var(--color-white);
+
+  /* Buttons */
+  --btn-primary-bg: var(--color-red-veneto);
+  --btn-primary-text: var(--color-white);
+
+  --btn-secondary-bg: var(--color-green-malopolska);
+  --btn-secondary-text: var(--color-white);
+
+  /* Social / culture */
+  --color-culture: var(--color-magenta-malopolska);
+  --color-outdoor: var(--color-azure-malopolska);
+
+
+}

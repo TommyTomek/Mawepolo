@@ -1,0 +1,75 @@
+{
+  "NAV": {
+    "HOME": "Strona główna",
+    "PREMIUM": "Strefa Premium",
+    "PARTNERS": "Partnerzy",
+    "BLOG": "Blog",
+    "RESOURCES": "Konkursy i zasoby",
+    "CONTACT": "Kontakt"
+  },
+  "LANG": {
+    "CODE": "PL"
+  },
+  "MENU": {
+    "DISCOVER_VENETO": {
+      "TITLE": "Odkryj Veneto",
+      "HISTORY": "Historia",
+      "MAIN_CITIES": "Główne miasta",
+      "MAIN_VILLAGES": "Najważniejsze miasteczka",
+      "LANDSCAPES": "Krajobrazy",
+      "CUISINE": "Kuchnia",
+      "DRINKS": "Napoje",
+      "TYPICAL_PRODUCTS": "Produkty regionalne",
+      "CRAFTS": "Rzemiosło",
+      "FESTIVALS_TRADITIONS": "Festiwale i tradycje",
+      "BIG_COMPANIES": "Duże firmy Veneto",
+      "SPORTS_FACILITIES": "Obiekty i trasy sportowe",
+      "NATURE_WELLNESS": "Natura i wellness",
+      "UNESCO_SITES": "Obiekty UNESCO",
+      "LANGUAGE_CULTURE": "Język i kultura"
+    },
+    "DISCOVER_MALOPOLSKA": {
+      "TITLE": "Odkryj Małopolskę",
+      "HISTORY": "Historia",
+      "MAIN_CITIES": "Główne miasta",
+      "MAIN_VILLAGES": "Najważniejsze miasteczka",
+      "LANDSCAPES": "Krajobrazy",
+      "CUISINE": "Kuchnia",
+      "DRINKS": "Napoje",
+      "TYPICAL_PRODUCTS": "Produkty regionalne",
+      "CRAFTS": "Rzemiosło",
+      "FESTIVALS_TRADITIONS": "Festiwale i tradycje",
+      "BIG_COMPANIES": "Duże firmy Małopolski",
+      "SPORTS_FACILITIES": "Obiekty i trasy sportowe",
+      "NATURE_WELLNESS": "Natura i wellness",
+      "UNESCO_SITES": "Obiekty UNESCO",
+      "LANGUAGE_CULTURE": "Język i kultura"
+    },
+    "MAPS": {
+      "TITLE": "Mapy",
+      "WEATHER": "Pogoda",
+      "CITIES_VILLAGES": "Miasta i Miasteczka",
+      "UNESCO_SITES": "Obiekty UNESCO",
+      "LANDSCAPES_SPORTS": "Krajobrazy i Trasy Sportowe",
+      "NATURE_WELLNESS": "Natura i Wellness",
+      "FOOD_CRAFTS": "Mapa Kulinarna / Rzemiosło",
+      "ECONOMIC_MAP": "Mapa Ekonomiczna"
+    },
+    "NETWORK_EVENTS": {
+      "TITLE": "Sieć i Wydarzenia",
+      "EVENTS_VENETO": "Wydarzenia Veneto",
+      "EVENTS_MALOPOLSKA": "Wydarzenia Małopolski",
+      "ASSOCIATIONS": "Stowarzyszenia",
+      "FIND_JOB": "Znajdź Pracę"
+    },
+    "WE_RECOMMEND": {
+      "TITLE": "Polecamy",
+      "TOURISM": "Dla turystyki",
+      "COMMERCE": "Dla handlu",
+      "SPORT": "Dla sportu",
+      "INSTITUTIONS": "Instytucje",
+      "OUR_PARTNERS": "Nasi Partnerzy",
+      "SPECIAL_SEASONAL_PRODUCTS": "Specjalne / sezonowe produkty online"
+    }
+  }
+}

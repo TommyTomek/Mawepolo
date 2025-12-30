@@ -1,0 +1,75 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "PREMIUM": "Premium Area",
+    "PARTNERS": "Partners",
+    "BLOG": "Blog",
+    "RESOURCES": "Calls and Resources",
+    "CONTACT": "Contact"
+  },
+  "LANG": {
+    "CODE": "EN"
+  },
+  "MENU": {
+    "DISCOVER_VENETO": {
+      "TITLE": "Discover Veneto",
+      "HISTORY": "History",
+      "MAIN_CITIES": "Main Cities",
+      "MAIN_VILLAGES": "Main Villages",
+      "LANDSCAPES": "Landscapes",
+      "CUISINE": "Cuisine",
+      "DRINKS": "Drinks",
+      "TYPICAL_PRODUCTS": "Typical Products",
+      "CRAFTS": "Crafts",
+      "FESTIVALS_TRADITIONS": "Festivals & Traditions",
+      "BIG_COMPANIES": "Major Veneto Companies",
+      "SPORTS_FACILITIES": "Sports Facilities & Routes",
+      "NATURE_WELLNESS": "Nature & Wellness",
+      "UNESCO_SITES": "UNESCO Sites",
+      "LANGUAGE_CULTURE": "Language & Culture"
+    },
+    "DISCOVER_MALOPOLSKA": {
+      "TITLE": "Discover Małopolska",
+      "HISTORY": "History",
+      "MAIN_CITIES": "Main Cities",
+      "MAIN_VILLAGES": "Main Villages",
+      "LANDSCAPES": "Landscapes",
+      "CUISINE": "Cuisine",
+      "DRINKS": "Drinks",
+      "TYPICAL_PRODUCTS": "Typical Products",
+      "CRAFTS": "Crafts",
+      "FESTIVALS_TRADITIONS": "Festivals & Traditions",
+      "BIG_COMPANIES": "Major Małopolska Companies",
+      "SPORTS_FACILITIES": "Sports Facilities & Routes",
+      "NATURE_WELLNESS": "Nature & Wellness",
+      "UNESCO_SITES": "UNESCO Sites",
+      "LANGUAGE_CULTURE": "Language & Culture"
+    },
+    "MAPS": {
+      "TITLE": "Maps",
+      "WEATHER": "Weather",
+      "CITIES_VILLAGES": "Cities & Villages",
+      "UNESCO_SITES": "UNESCO Sites",
+      "LANDSCAPES_SPORTS": "Landscapes & Sports Routes",
+      "NATURE_WELLNESS": "Nature & Wellness",
+      "FOOD_CRAFTS": "Food Map / Crafts",
+      "ECONOMIC_MAP": "Economic Map"
+    },
+    "NETWORK_EVENTS": {
+      "TITLE": "Network & Events",
+      "EVENTS_VENETO": "Events Veneto",
+      "EVENTS_MALOPOLSKA": "Events Małopolska",
+      "ASSOCIATIONS": "Associations",
+      "FIND_JOB": "Find a Job"
+    },
+    "WE_RECOMMEND": {
+      "TITLE": "We Recommend",
+      "TOURISM": "For Tourism",
+      "COMMERCE": "For Commerce",
+      "SPORT": "For Sport",
+      "INSTITUTIONS": "Institutions",
+      "OUR_PARTNERS": "Our Partners",
+      "SPECIAL_SEASONAL_PRODUCTS": "Special / Seasonal Online Products"
+    }
+  }
+}

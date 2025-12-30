@@ -1,0 +1,50 @@
+<footer class="footer">
+
+  <div class="footer-top">
+    <ul class="footer-links">
+      <li><a routerLink="/privacy-policy">Privacy Policy</a></li>
+      <li><a routerLink="/terms-and-conditions">Terms & Conditions</a></li>
+      <li><a routerLink="/terms-of-services">Terms of Services</a></li>
+      <li><a routerLink="/work-with-us">Lavora / Collabora con noi</a></li>
+      <li><a routerLink="/cookie-settings">Cookie Settings</a></li>
+      <li><a href="mailto:info@yourproject.com">info@yourproject.com</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-languages">
+  <ul class="language-list">
+    <li>
+      <button (click)="switchLanguage('it')" [class.active]="currentLang === 'it'">
+        🇮🇹 Italiano
+      </button>
+    </li>
+    <li>
+      <button (click)="switchLanguage('en')" [class.active]="currentLang === 'en'">
+        🇬🇧 English
+      </button>
+    </li>
+    <li>
+      <button (click)="switchLanguage('pl')" [class.active]="currentLang === 'pl'">
+        🇵🇱 Polski
+      </button>
+    </li>
+  </ul>
+</div>
+
+
+
+  <div class="footer-bottom">
+  <div class="social">
+    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+
+  <div class="copyright">
+    © {{ currentYear }} MAWEPOLO — All rights reserved.
+  </div>
+</div>
+
+
+</footer>

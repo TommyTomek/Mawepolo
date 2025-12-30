@@ -1,0 +1,76 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "PREMIUM": "Area Premium",
+    "PARTNERS": "Partner",
+    "BLOG": "Blog",
+    "RESOURCES": "Bandi e risorse",
+    "CONTACT": "Contatti"
+  },
+  "LANG": {
+    "CODE": "IT"
+  },
+  "MENU": {
+    "DISCOVER_VENETO": {
+      "TITLE": "Scopri il Veneto",
+      "HISTORY": "La storia",
+      "MAIN_CITIES": "Città principali",
+      "MAIN_VILLAGES": "Borghi principali",
+      "LANDSCAPES": "Paesaggi",
+      "CUISINE": "Cucina",
+      "DRINKS": "Bevande",
+      "TYPICAL_PRODUCTS": "Prodotti tipici",
+      "CRAFTS": "Artigianato",
+      "FESTIVALS_TRADITIONS": "Sagre, feste e tradizioni",
+      "BIG_COMPANIES": "Grandi aziende venete",
+      "SPORTS_FACILITIES": "Impianti e percorsi sportivi",
+      "NATURE_WELLNESS": "Natura e benessere",
+      "UNESCO_SITES": "Siti UNESCO",
+      "LANGUAGE_CULTURE": "Lingua e cultura"
+    },
+    "DISCOVER_MALOPOLSKA": {
+      "TITLE": "Scopri la Małopolska",
+      "HISTORY": "La storia",
+      "MAIN_CITIES": "Città principali",
+      "MAIN_VILLAGES": "Borghi principali",
+      "LANDSCAPES": "Paesaggi",
+      "CUISINE": "Cucina",
+      "DRINKS": "Bevande",
+      "TYPICAL_PRODUCTS": "Prodotti tipici",
+      "CRAFTS": "Artigianato",
+      "FESTIVALS_TRADITIONS": "Sagre, feste e tradizioni",
+      "BIG_COMPANIES": "Grandi aziende della Małopolska",
+      "SPORTS_FACILITIES": "Impianti e percorsi sportivi",
+      "NATURE_WELLNESS": "Natura e benessere",
+      "UNESCO_SITES": "Siti UNESCO",
+      "LANGUAGE_CULTURE": "Lingua e cultura"
+    },
+    "MAPS": {
+      "TITLE": "Mappe",
+      "WEATHER": "Meteo",
+      "CITIES_VILLAGES": "Città e Borghi",
+      "UNESCO_SITES": "Siti UNESCO",
+      "LANDSCAPES_SPORTS": "Paesaggi e Percorsi sportivi",
+      "NATURE_WELLNESS": "Natura e benessere",
+      "FOOD_CRAFTS": "Mappa Alimentare / Artigianato",
+      "ECONOMIC_MAP": "Mappa Economica"
+    },
+    "NETWORK_EVENTS": {
+      "TITLE": "Fai Network ed Eventi",
+      "EVENTS_VENETO": "Eventi Veneto",
+      "EVENTS_MALOPOLSKA": "Eventi Małopolska",
+      "ASSOCIATIONS": "Associazioni",
+      "FIND_JOB": "Trova Lavoro"
+    },
+    "WE_RECOMMEND": {
+      "TITLE": "Noi Consigliamo",
+      "TOURISM": "Per il turismo",
+      "COMMERCE": "Per il commercio",
+      "SPORT": "Per lo sport",
+      "INSTITUTIONS": "Le Istituzioni",
+      "OUR_PARTNERS": "I nostri Partner",
+      "SPECIAL_SEASONAL_PRODUCTS": "Vendita prodotti online speciali/stagionali"
+    }
+  }
+}
+
