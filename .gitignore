@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -6,11 +5,20 @@
 /tmp
 /out-tsc
 /bazel-out
+/.angular
+/.ng/
+/coverage
 
 # Node
 /node_modules
+/node_modules/
+/package-lock.json
+/yarn.lock
 npm-debug.log
+npm-debug.log*
 yarn-error.log
+yarn-debug.log*
+yarn-error.log*
 
 # IDEs and editors
 .idea/
@@ -20,20 +28,27 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
-
-# Visual Studio Code
-.vscode/*
+/.vscode
+/.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
+/.history/*
+
+# Environment files
+/.env
+
+# Angular CLI and build artefacts
+/.angular-cli.json
+
+# TypeScript cache
+*.tsbuildinfo
 
 # Miscellaneous
 /.angular/cache
 .sass-cache/
 /connect.lock
-/coverage
 /libpeerconnection.log
 testem.log
 /typings
@@ -42,33 +57,3 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
-=======
-# Angular specific
-/dist
-/node_modules
-/.angular
-/.vscode
-/.idea
-.DS_Store
-
-
-# Node modules and dependency files
-/node_modules/
-/package-lock.json
-/yarn.lock
-
-# Environment files
-/.env
-
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
->>>>>>> 73f945c5c769164bc1c09375c292292f788fd8b7
