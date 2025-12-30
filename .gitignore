@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
 # Compiled output
@@ -41,3 +42,33 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+=======
+# Angular specific
+/dist
+/node_modules
+/.angular
+/.vscode
+/.idea
+.DS_Store
+
+
+# Node modules and dependency files
+/node_modules/
+/package-lock.json
+/yarn.lock
+
+# Environment files
+/.env
+
+# Angular CLI and build artefacts
+/.angular-cli.json
+/.ng/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+>>>>>>> 73f945c5c769164bc1c09375c292292f788fd8b7
