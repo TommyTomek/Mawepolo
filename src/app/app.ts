@@ -1,8 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './components/navbar/navbar';
-import { FooterComponent } from './components/footer/footer';
-
+import { LayoutComponent } from './core/layout/layout.component';
 import { TranslateService } from '@ngx-translate/core';
 import { map } from 'rxjs';
 
@@ -10,9 +7,7 @@ import { map } from 'rxjs';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, 
-    NavbarComponent, 
-    FooterComponent
+    LayoutComponent
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss']

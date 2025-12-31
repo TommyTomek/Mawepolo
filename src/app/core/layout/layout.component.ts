@@ -30,5 +30,8 @@ export class LayoutComponent {
       this.isTablet = result.breakpoints[BREAKPOINTS.tablet];
       this.isDesktop = result.breakpoints[BREAKPOINTS.desktop];
     });
+    console.log('this.isPhone', this.isPhone);
+    console.log('this.isTablet', this.isTablet);
+    console.log('this.isDesktop', this.isDesktop);
   }
 }
