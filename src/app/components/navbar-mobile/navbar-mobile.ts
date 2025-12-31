@@ -5,6 +5,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { Inject,NgZone,PLATFORM_ID } from '@angular/core';
+import { HostListener } from '@angular/core';
 
 
 
@@ -29,7 +30,8 @@ export class NavbarMobileComponent {
   scrollTimeout: any;
   isNavButtonHovered = false;
   menuOpen = false;
-
+  menuIndex = 0;
+  touchStartX = 0; 
 
   constructor(
     private translate: TranslateService, 
@@ -51,9 +53,36 @@ export class NavbarMobileComponent {
   // Toggle mega menu panels 
   toggleMenu() { 
     this.menuOpen = !this.menuOpen; 
+    this.updateScrollLock();
   }
   closeMenu() { 
     this.menuOpen = false; 
+    this.updateScrollLock();
   }
+  updateScrollLock() {
+    if (this.menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+@HostListener('touchstart', ['$event'])
+onTouchStart(event: TouchEvent) {
+  this.touchStartX = event.touches[0].clientX;
+}
+
+@HostListener('touchend', ['$event'])
+onTouchEnd(event: TouchEvent) {
+  const touchEndX = event.changedTouches[0].clientX;
+  const deltaX = touchEndX - this.touchStartX;
+
+  if (deltaX < -50 && this.menuIndex === 0) {
+    this.menuIndex = 1;
+  } else if (deltaX > 50 && this.menuIndex === 1) {
+    this.menuIndex = 0;
+  }
+}
+
 
 }

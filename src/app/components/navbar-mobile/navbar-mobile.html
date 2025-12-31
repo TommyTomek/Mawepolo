@@ -16,36 +16,54 @@
     </button>
   </div>
 
-  <!-- Slide Menu -->
   <div class="mobile-menu" [class.open]="menuOpen">
+  <div class="menu-slider" [style.transform]="menuIndex === 0 ? 'translateX(0)' : 'translateX(-100vw)'">
 
-    <!-- Primary -->
-    <ul class="mobile-primary">
-      <li><a routerLink="/" (click)="closeMenu()">{{ 'NAV.HOME' | translate }}</a></li>
-      <li><a routerLink="/PremiumArea" (click)="closeMenu()">{{ 'NAV.PREMIUM' | translate }}</a></li>
-      <li><a routerLink="/Partners" (click)="closeMenu()">{{ 'NAV.PARTNERS' | translate }}</a></li>
-      <li><a routerLink="/Blog" (click)="closeMenu()">{{ 'NAV.BLOG' | translate }}</a></li>
-      <li><a routerLink="/BandiErisorse" (click)="closeMenu()">{{ 'NAV.RESOURCES' | translate }}</a></li>
-      <li><a routerLink="/Contatti" (click)="closeMenu()">{{ 'NAV.CONTACT' | translate }}</a></li>
-    </ul>
+  <!-- Slide 1 -->
+  <ul class="mobile-primary">
+    <li><a routerLink="/" (click)="closeMenu()">{{ 'NAV.HOME' | translate }}</a></li>
+    <li><a routerLink="/PremiumArea" (click)="closeMenu()">{{ 'NAV.PREMIUM' | translate }}</a></li>
+    <li><a routerLink="/Partners" (click)="closeMenu()">{{ 'NAV.PARTNERS' | translate }}</a></li>
+    <li><a routerLink="/Blog" (click)="closeMenu()">{{ 'NAV.BLOG' | translate }}</a></li>
+    <li><a routerLink="/BandiErisorse" (click)="closeMenu()">{{ 'NAV.RESOURCES' | translate }}</a></li>
+    <li><a routerLink="/Contatti" (click)="closeMenu()">{{ 'NAV.CONTACT' | translate }}</a></li>
+  </ul>
 
-    <!-- Secondary (under primary, as you requested) -->
-    <ul class="mobile-secondary">
-      <li><a routerLink="/DiscoverVeneto" (click)="closeMenu()">{{ 'MENU.DISCOVER_VENETO.TITLE' | translate }}</a></li>
-      <li><a routerLink="/DiscoverMalopolska" (click)="closeMenu()">{{ 'MENU.DISCOVER_MALOPOLSKA.TITLE' | translate }}</a></li>
-      <li><a routerLink="/Mappe" (click)="closeMenu()">{{ 'MENU.MAPS.TITLE' | translate }}</a></li>
-      <li><a routerLink="/NetworkEvents" (click)="closeMenu()">{{ 'MENU.NETWORK_EVENTS.TITLE' | translate }}</a></li>
-      <li><a routerLink="/WeRecommend" (click)="closeMenu()">{{ 'MENU.WE_RECOMMEND.TITLE' | translate }}</a></li>
-    </ul>
+  <!-- Slide 2 -->
+  <ul class="mobile-secondary">
+    <li><a routerLink="/DiscoverVeneto">Discover Veneto</a></li>
 
-    <!-- Language Switch -->
-    <div class="mobile-lang">
-      <button (click)="switchLanguage('en')">EN</button>
-      <button (click)="switchLanguage('pl')">PL</button>
-      <button (click)="switchLanguage('it')">IT</button>
-    </div>
+    <li><a routerLink="/DiscoverVeneto" (click)="closeMenu()">{{ 'MENU.DISCOVER_VENETO.TITLE' | translate }}</a></li>
+    <li><a routerLink="/DiscoverMalopolska" (click)="closeMenu()">{{ 'MENU.DISCOVER_MALOPOLSKA.TITLE' | translate }}</a></li>
+    <li><a routerLink="/Mappe" (click)="closeMenu()">{{ 'MENU.MAPS.TITLE' | translate }}</a></li>
+    <li><a routerLink="/NetworkEvents" (click)="closeMenu()">{{ 'MENU.NETWORK_EVENTS.TITLE' | translate }}</a></li>
+    <li><a routerLink="/WeRecommend" (click)="closeMenu()">{{ 'MENU.WE_RECOMMEND.TITLE' | translate }}</a></li>
+  </ul>
 
+</div>
+
+  <!-- Pagination Dots -->
+  <div class="menu-pagination">
+    <span [class.active]="menuIndex === 0"></span>
+    <span [class.active]="menuIndex === 1"></span>
   </div>
+
+  <!-- Language Switch (always visible) -->
+<div class="mobile-lang">
+  <button (click)="switchLanguage('en')">
+    🇬🇧 EN
+  </button>
+
+  <button (click)="switchLanguage('pl')">
+    🇵🇱 PL
+  </button>
+
+  <button (click)="switchLanguage('it')">
+    🇮🇹 IT
+  </button>
+</div>
+
+</div>
 
   <!-- Overlay -->
   <div class="overlay" [class.open]="menuOpen" (click)="closeMenu()"></div>
