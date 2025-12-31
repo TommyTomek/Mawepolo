@@ -14,7 +14,7 @@
    NAVBAR TOP BAR
 ────────────────────────────────────────────── */
 .mobile-navbar {
-  height: 10vh;
+  height: 10dvh;
   padding: 0 var(--spacing-md);
   display: flex;
   justify-content: space-between;
@@ -25,12 +25,12 @@
 
 /* Logo */
 .logo {
-  height: 8vh;
+  height: 8dvh;
   z-index: 1100;
 }
 
 .logo img {
-  height: 8vh;
+  height: 8dvh;
 }
 
 /* Burger */
@@ -70,14 +70,14 @@
 ────────────────────────────────────────────── */
 .mobile-menu {
   position: fixed;
-  top: 10vh;
+  top: 10dvh;
   left: 0;
   width: 100%;
-  height: calc(100vh - 10vh);
+  height: calc(100dvh - 10dvh);
   padding: var(--spacing-lg);
   background-color: var(--color-bg);
 
-  transform: translateY(-100vh);
+  transform: translateY(-100dvh);
   transition: transform 0.35s ease;
 
   overflow-y: auto;
@@ -98,7 +98,7 @@
 ────────────────────────────────────────────── */
 .menu-slider {
   display: flex;
-  width: 200vw; /* two slides */
+  width: 200dvw; /* two slides */
   transition: transform 0.3s ease;
   overflow: visible;
   touch-action: pan-y;
@@ -163,8 +163,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.4);
 
   opacity: 0;
