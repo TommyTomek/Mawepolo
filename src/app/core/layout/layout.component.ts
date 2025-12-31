@@ -3,7 +3,9 @@ import { RouterOutlet } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { BREAKPOINTS } from './breakpoints';
 import { NavbarDesktopComponent } from "../../components/navbar-desktop/navbar-desktop";
+import { NavbarMobileComponent } from '../../components/navbar-mobile/navbar-mobile';
 import { FooterComponent } from '../../components/footer/footer';
+
 
 @Component({
   selector: 'app-layout',
@@ -11,10 +13,11 @@ import { FooterComponent } from '../../components/footer/footer';
   styleUrls: ['./layout.component.scss'],
   imports: [
     NavbarDesktopComponent,
+    NavbarMobileComponent,
     RouterOutlet,
-    FooterComponent
-]
-})
+    FooterComponent,
+    
+]})
 export class LayoutComponent {
   isPhone = false;
   isTablet = false;

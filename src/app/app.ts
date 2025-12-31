@@ -1,13 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { LayoutComponent } from './core/layout/layout.component';
+import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { map } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    LayoutComponent
+    RouterOutlet
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss']

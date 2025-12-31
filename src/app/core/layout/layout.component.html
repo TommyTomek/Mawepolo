@@ -1,9 +1,9 @@
+
 @if (isDesktop) {
   <app-navbar-desktop />
 }
-
-<main class="content">
-  <router-outlet></router-outlet>
-</main>
-
+@if (isPhone) {
+  <app-navbar-mobile />
+}
+<router-outlet></router-outlet>
 <app-footer></app-footer>
