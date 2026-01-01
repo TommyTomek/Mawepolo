@@ -1,71 +1,128 @@
 <div class="mobile-nav-wrapper">
-  <div class="mobile-navbar">
-    
-    <!-- Logo -->
-    <div class="logo">
-      <a routerLink="/">
-        <img src="assets/branding/logo_wb.png" alt="Logo" />
-      </a>
+    <div class="mobile-navbar">
+        <!-- Logo -->
+        <div class="logo">
+            <a routerLink="/">
+                <img src="assets/branding/logo_wb.png" alt="Logo" />
+            </a>
+        </div>
+
+        <!-- Burger Icon -->
+        <button class="burger" (click)="toggleMenu()">
+            <span [class.open]="menuOpen"></span>
+            <span [class.open]="menuOpen"></span>
+            <span [class.open]="menuOpen"></span>
+        </button>
     </div>
+    <div class="mobile-menu" [class.open]="menuOpen">
+        <div class="menu-slider" [style.transform]="'translateX(-' + (menuIndex * 100) + 'dvw)'">
 
-    <!-- Burger Icon -->
-    <button class="burger" (click)="toggleMenu()">
-      <span [class.open]="menuOpen"></span>
-      <span [class.open]="menuOpen"></span>
-      <span [class.open]="menuOpen"></span>
-    </button>
-  </div>
+            <!-- Slide 1 -->
+            <ul class="mobile-primary">
+                <li><a routerLink="/" (click)="closeMenu()">{{ 'NAV.HOME' | translate }}</a></li>
+                <li><a routerLink="/PremiumArea" (click)="closeMenu()">{{ 'NAV.PREMIUM' | translate }}</a></li>
+                <li><a routerLink="/Partners" (click)="closeMenu()">{{ 'NAV.PARTNERS' | translate }}</a></li>
+                <li><a routerLink="/Blog" (click)="closeMenu()">{{ 'NAV.BLOG' | translate }}</a></li>
+                <li><a routerLink="/BandiErisorse" (click)="closeMenu()">{{ 'NAV.RESOURCES' | translate }}</a></li>
+                <li><a routerLink="/Contatti" (click)="closeMenu()">{{ 'NAV.CONTACT' | translate }}</a></li>
+            </ul>
 
-  <div class="mobile-menu" [class.open]="menuOpen">
-  <div class="menu-slider" [style.transform]="menuIndex === 0 ? 'translateX(0)' : 'translateX(-100dvw)'">
+            <!-- Slide 2 -->
+            <ul class="mobile-secondary mobile-secondary--main">
+                <li class="mobile-has-submenu">
+                    <a href="#" (click)="openDiscoverVeneto()">{{ 'MENU.DISCOVER_VENETO.TITLE' | translate }}
+                    </a>
+                </li>
 
-  <!-- Slide 1 -->
-  <ul class="mobile-primary">
-    <li><a routerLink="/" (click)="closeMenu()">{{ 'NAV.HOME' | translate }}</a></li>
-    <li><a routerLink="/PremiumArea" (click)="closeMenu()">{{ 'NAV.PREMIUM' | translate }}</a></li>
-    <li><a routerLink="/Partners" (click)="closeMenu()">{{ 'NAV.PARTNERS' | translate }}</a></li>
-    <li><a routerLink="/Blog" (click)="closeMenu()">{{ 'NAV.BLOG' | translate }}</a></li>
-    <li><a routerLink="/BandiErisorse" (click)="closeMenu()">{{ 'NAV.RESOURCES' | translate }}</a></li>
-    <li><a routerLink="/Contatti" (click)="closeMenu()">{{ 'NAV.CONTACT' | translate }}</a></li>
-  </ul>
+                <li class="mobile-has-submenu">
+                    <a href="#" (click)="openDiscoverMalopolska()">{{ 'MENU.DISCOVER_MALOPOLSKA.TITLE' | translate }}
+                    </a>
+                </li>
 
-  <!-- Slide 2 -->
-  <ul class="mobile-secondary">
-    <li><a routerLink="/DiscoverVeneto">Discover Veneto</a></li>
+                <li><a routerLink="/Mappe" (click)="closeMenu()">{{ 'MENU.MAPS.TITLE' | translate }}</a></li>
+                <li><a routerLink="/NetworkEvents" (click)="closeMenu()">{{ 'MENU.NETWORK_EVENTS.TITLE' | translate
+                        }}</a></li>
+                <li><a routerLink="/WeRecommend" (click)="closeMenu()">{{ 'MENU.WE_RECOMMEND.TITLE' | translate }}</a>
+                </li>
+            </ul>
 
-    <li><a routerLink="/DiscoverVeneto" (click)="closeMenu()">{{ 'MENU.DISCOVER_VENETO.TITLE' | translate }}</a></li>
-    <li><a routerLink="/DiscoverMalopolska" (click)="closeMenu()">{{ 'MENU.DISCOVER_MALOPOLSKA.TITLE' | translate }}</a></li>
-    <li><a routerLink="/Mappe" (click)="closeMenu()">{{ 'MENU.MAPS.TITLE' | translate }}</a></li>
-    <li><a routerLink="/NetworkEvents" (click)="closeMenu()">{{ 'MENU.NETWORK_EVENTS.TITLE' | translate }}</a></li>
-    <li><a routerLink="/WeRecommend" (click)="closeMenu()">{{ 'MENU.WE_RECOMMEND.TITLE' | translate }}</a></li>
-  </ul>
+            <!-- Slide 3 — Shared submenu -->
+            <div class="mobile-submenu">
 
+                <button class="back-btn" (click)="backToMain()">← Back</button>
+
+                <!-- Discover Veneto submenu -->
+                @if (activeSubmenu === 'veneto') {
+                <ng-container>
+                    <h3>{{ 'MENU.DISCOVER_VENETO.TITLE' | translate }}</h3>
+
+                    <div class="submenu-group">
+                        <h4>Culture & Identity</h4>
+                        <a routerLink="/discoverVeneto/history" (click)="closeMenu()">History</a>
+                        <a routerLink="/discoverVeneto/LanguageCulture" (click)="closeMenu()">Language & Culture</a>
+                        <a routerLink="/discoverVeneto/FestivalsTraditions" (click)="closeMenu()">Festivals &
+                            Traditions</a>
+                        <a routerLink="/discoverVeneto/Crafts" (click)="closeMenu()">Crafts</a>
+                        <a routerLink="/discoverVeneto/UnescoSites" (click)="closeMenu()">UNESCO Sites</a>
+                    </div>
+
+                    <div class="submenu-group">
+                        <h4>Territory & Places</h4>
+                        <a routerLink="/discoverVeneto/MainCities" (click)="closeMenu()">Main Cities</a>
+                        <a routerLink="/discoverVeneto/MainVillages" (click)="closeMenu()">Main Villages</a>
+                        <a routerLink="/discoverVeneto/Landscapes" (click)="closeMenu()">Landscapes</a>
+                        <a routerLink="/discoverVeneto/NatureWellness" (click)="closeMenu()">Nature & Wellness</a>
+                    </div>
+
+                    <div class="submenu-group">
+                        <h4>Food & Lifestyle</h4>
+                        <a routerLink="/discoverVeneto/Cuisine" (click)="closeMenu()">Cuisine</a>
+                        <a routerLink="/discoverVeneto/Drinks" (click)="closeMenu()">Drinks</a>
+                        <a routerLink="/discoverVeneto/TypicalProducts" (click)="closeMenu()">Typical Products</a>
+                    </div>
+
+                    <div class="submenu-group">
+                        <h4>Economy & Innovation</h4>
+                        <a routerLink="/discoverVeneto/BigCompanies" (click)="closeMenu()">Big Companies</a>
+                        <a routerLink="/discoverVeneto/SportsFacilities" (click)="closeMenu()">Sports Facilities</a>
+                    </div>
+                </ng-container>
+                }
+                @if (activeSubmenu === 'malopolska') {
+                <ng-container>
+                    <h3>{{ 'MENU.DISCOVER_MALOPOLSKA.TITLE' | translate }}</h3>
+                    <!-- We will fill this later -->
+                </ng-container>
+                }
+
+            </div>
+
+        </div>
+
+        <!-- Pagination Dots -->
+        @if (menuIndex < 2) {
+            <div class="menu-pagination" [class.hidden]="menuIndex === 2">
+                <span [class.active]="menuIndex === 0"></span>
+                <span [class.active]="menuIndex === 1"></span>
+            </div>
+            }
+
+
+        <!-- Language Switch (always visible) -->
+        <div class="mobile-lang">
+            <button (click)="switchLanguage('en')">
+                🇬🇧 EN
+            </button>
+
+            <button (click)="switchLanguage('pl')">
+                🇵🇱 PL
+            </button>
+
+            <button (click)="switchLanguage('it')">
+                🇮🇹 IT
+            </button>
+        </div>
+
+    </div>
+    <div class="overlay" [class.open]="menuOpen" (click)="closeMenu()"></div>
 </div>
-
-  <!-- Pagination Dots -->
-  <div class="menu-pagination">
-    <span [class.active]="menuIndex === 0"></span>
-    <span [class.active]="menuIndex === 1"></span>
-  </div>
-
-  <!-- Language Switch (always visible) -->
-<div class="mobile-lang">
-  <button (click)="switchLanguage('en')">
-    🇬🇧 EN
-  </button>
-
-  <button (click)="switchLanguage('pl')">
-    🇵🇱 PL
-  </button>
-
-  <button (click)="switchLanguage('it')">
-    🇮🇹 IT
-  </button>
-</div>
-
-</div>
-
-  <!-- Overlay -->
-  <div class="overlay" [class.open]="menuOpen" (click)="closeMenu()"></div>
-</div>
-

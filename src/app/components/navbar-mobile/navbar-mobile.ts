@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { Inject,NgZone,PLATFORM_ID } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 
 
 
@@ -16,7 +18,8 @@ import { HostListener } from '@angular/core';
     MatIconModule,
     TranslateModule,
     MatMenuModule,
-    RouterLink
+    RouterLink,
+    CommonModule
   ],
   templateUrl: './navbar-mobile.html',
   styleUrls: ['./navbar-mobile.scss']
@@ -32,6 +35,7 @@ export class NavbarMobileComponent {
   menuOpen = false;
   menuIndex = 0;
   touchStartX = 0; 
+  activeSubmenu: 'veneto' | 'malopolska' | null = null;
 
   constructor(
     private translate: TranslateService, 
@@ -77,12 +81,35 @@ onTouchEnd(event: TouchEvent) {
   const touchEndX = event.changedTouches[0].clientX;
   const deltaX = touchEndX - this.touchStartX;
 
-  if (deltaX < -50 && this.menuIndex === 0) {
-    this.menuIndex = 1;
-  } else if (deltaX > 50 && this.menuIndex === 1) {
-    this.menuIndex = 0;
+  // Swipe left
+  if (deltaX < -50 && this.menuIndex < 2) {
+    this.menuIndex++;
+  }
+
+  // Swipe right
+  if (deltaX > 50 && this.menuIndex > 0) {
+    this.menuIndex--;
   }
 }
+
+
+openDiscoverVeneto() {
+  this.activeSubmenu = 'veneto';
+  this.menuIndex = 2;
+}
+
+openDiscoverMalopolska() {
+  this.activeSubmenu = 'malopolska';
+  this.menuIndex = 2;
+}
+
+backToMain() {
+  this.menuIndex = 1;
+  this.activeSubmenu = null;
+}
+
+
+
 
 
 }

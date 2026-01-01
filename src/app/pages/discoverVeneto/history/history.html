@@ -1,27 +1,35 @@
-<section class="hero">
-  <div class="hero-content">
-    <h1>Discover Veneto — History</h1>
-    <p>
-      Veneto is a region shaped by centuries of culture, art, and historical evolution.
-      From ancient Roman settlements to the golden age of the Venetian Republic,
-      its heritage is one of the richest in Italy.
-    </p>
-  </div>
-</section>
+<app-hero
+  [title]="'DISCOVER_VENETO.HISTORY.TITLE' | translate"
+  [subtitle]="'DISCOVER_VENETO.HISTORY.SUBTITLE' | translate"
+  [background]="background">
+</app-hero>
 
-<section class="content">
-  <h2>Origins and Early Civilizations</h2>
-  <p>
-    The earliest traces of human presence in Veneto date back to prehistoric times...
-  </p>
+<app-section
+  [title]="'DISCOVER_VENETO.HISTORY.ORIGINS.TITLE' | translate">
+  {{ 'DISCOVER_VENETO.HISTORY.ORIGINS.TEXT' | translate }}
+</app-section>
 
-  <h2>The Rise of the Venetian Republic</h2>
-  <p>
-    For over a millennium, Venice dominated trade routes and shaped Mediterranean history...
-  </p>
+<app-section
+  [title]="'DISCOVER_VENETO.HISTORY.MEDIEVAL.TITLE' | translate">
+  {{ 'DISCOVER_VENETO.HISTORY.MEDIEVAL.TEXT' | translate }}
+</app-section>
 
-  <h2>Modern Veneto</h2>
-  <p>
-    Today, Veneto blends tradition and innovation, preserving its identity while evolving...
-  </p>
-</section>
+<app-section
+  [title]="'DISCOVER_VENETO.HISTORY.SERENISSIMA.TITLE' | translate">
+  {{ 'DISCOVER_VENETO.HISTORY.SERENISSIMA.TEXT' | translate }}
+</app-section>
+
+<app-section
+  [title]="'DISCOVER_VENETO.HISTORY.MODERN.TITLE' | translate">
+  {{ 'DISCOVER_VENETO.HISTORY.MODERN.TEXT' | translate }}
+</app-section>
+
+<app-section
+  [title]="'DISCOVER_VENETO.HISTORY.CONTEMPORARY.TITLE' | translate">
+  {{ 'DISCOVER_VENETO.HISTORY.CONTEMPORARY.TEXT' | translate }}
+</app-section>
+
+<app-cta
+  [text]="'DISCOVER_VENETO.HISTORY.CTA' | translate"
+  link="/discoverVeneto/MainCities">
+</app-cta>

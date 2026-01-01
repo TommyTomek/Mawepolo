@@ -2,204 +2,310 @@
    NAVBAR WRAPPER
 ────────────────────────────────────────────── */
 .mobile-nav-wrapper {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: var(--color-bg);
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.7);
+    z-index: 9999;
 }
 
 /* ─────────────────────────────────────────────
    NAVBAR TOP BAR
 ────────────────────────────────────────────── */
 .mobile-navbar {
-  height: 10dvh;
-  padding: 0 var(--spacing-md);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--color-bg);
-  z-index: 1000;
+    position: relative;
+    height: 10dvh;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-bg);
+    z-index: 300;
+    
 }
 
 /* Logo */
 .logo {
-  height: 8dvh;
-  z-index: 1100;
+    height: 8dvh;
 }
 
 .logo img {
-  height: 8dvh;
+    height: 8dvh;
 }
 
 /* Burger */
 .burger {
-  width: 32px;
-  height: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: none;
-  cursor: pointer;
-  background-color: var(--color-bg);
-  z-index: 1100;
+    width: 32px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-bg);
 }
 
 .burger span {
-  height: 3px;
-  background-color: var(--color-blue-night);
-  border-radius: 2px;
-  transition: 0.3s ease;
+    height: 3px;
+    background-color: var(--color-blue-night);
+    border-radius: 2px;
+    transition: 0.3s ease;
 }
 
 .burger span.open:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
 }
 
 .burger span.open:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
 
 .burger span.open:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 /* ─────────────────────────────────────────────
    SLIDE MENU PANEL
 ────────────────────────────────────────────── */
 .mobile-menu {
-  position: fixed;
-  top: 10dvh;
-  left: 0;
-  width: 100%;
-  height: calc(100dvh - 10dvh);
-  padding: var(--spacing-lg);
-  background-color: var(--color-bg);
+    position: fixed;
+    top: 10dvh;
+    left: 0;
+    width: 100%;
+    height: calc(100dvh - 10dvh);
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg);
+    z-index: 200;
+    transform: translateY(-100dvh);
+    transition: transform 0.35s ease;
 
-  transform: translateY(-100dvh);
-  transition: transform 0.35s ease;
-
-  overflow-y: auto;
-  overflow-x: hidden;
-  touch-action: pan-y;
-
-  z-index: 1000;
-  display: flex; 
-  flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    touch-action: pan-y;
+    display: flex;
+    flex-direction: column;
 }
 
 .mobile-menu.open {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 /* ─────────────────────────────────────────────
    MENU SLIDER (PRIMARY + SECONDARY)
 ────────────────────────────────────────────── */
 .menu-slider {
-  display: flex;
-  width: 200dvw; /* two slides */
-  transition: transform 0.3s ease;
-  overflow: visible;
-  touch-action: pan-y;
+    display: flex;
+    width: 300dvw;
+    /* three slides */
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: visible;
+    touch-action: pan-y;
 }
 
 .mobile-primary,
 .mobile-secondary {
+    width: 100vw;
+    flex-shrink: 0;
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-lg) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.mobile-submenu {
   width: 100vw;
   flex-shrink: 0;
-  list-style: none;
-  padding: 0;
-  margin: var(--spacing-lg) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
+  animation: fadeSlideIn 0.4s ease;
 }
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 .mobile-primary a,
 .mobile-secondary a {
-  font-size: var(--font-size-lg);
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--color-blue-night);
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-blue-night);
 }
 
 /* ─────────────────────────────────────────────
    PAGINATION DOTS
 ────────────────────────────────────────────── */
 .menu-pagination {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: var(--spacing-md);
-  margin-bottom: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
 }
 
 .menu-pagination span {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--color-blue-night);
-  opacity: 0.3;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-blue-night);
+    opacity: 0.3;
 }
 
 .menu-pagination span.active {
-  opacity: 1;
+    opacity: 1;
 }
 
 /* ─────────────────────────────────────────────
    LANGUAGE SWITCH
 ────────────────────────────────────────────── */
 .mobile-lang {
-  margin-top: var(--spacing-xl);
-  display: flex;
-  gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    display: flex;
+    gap: var(--spacing-md);
 }
 
 /* ─────────────────────────────────────────────
    OVERLAY
 ────────────────────────────────────────────── */
 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100dvw;
-  height: 100dvh;
-  background: rgba(0, 0, 0, 0.4);
-
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease;
-
-  z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
 }
 
 .overlay.open {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
+
 .mobile-lang {
-  margin-top: auto;
-  padding-bottom: var(--spacing-lg);
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
+    margin-top: auto;
+    padding-bottom: var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
 }
 
 .mobile-lang button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    font-size: var(--font-size-md);
+    font-weight: bold;
+    color: var(--color-blue-night);
+    cursor: pointer;
+}
+
+.mobile-lang mat-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.mobile-secondary--main li.mobile-has-submenu > a {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  gap: 6px;
+  position: relative;
+}
+
+.mobile-secondary--main li.mobile-has-submenu > a::after {
+  margin-left: 5px;
+  content: ">";
+  font-size: 1em;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-secondary--main li.mobile-has-submenu > a:hover::after,
+.mobile-secondary--main li.mobile-has-submenu > a:active::after {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+
+.back-btn {
   background: none;
   border: none;
   font-size: var(--font-size-md);
   font-weight: bold;
   color: var(--color-blue-night);
   cursor: pointer;
+  margin-bottom: var(--spacing-md);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease;
 }
 
-.mobile-lang mat-icon {
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
+.back-btn:hover {
+  transform: translateX(-4px);
+}
+.submenu-group h4 {
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+  color: var(--color-blue-night);
+  opacity: 0.6;
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.submenu-group a {
+  display: block;
+  font-size: var(--font-size-md);
+  font-weight: bold;
+  color: var(--color-blue-night);
+  text-decoration: none;
+  padding: 6px 0 6px var(--spacing-sm);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.submenu-group a:active {
+  transform: scale(0.98);
+  opacity: 0.6;
+}
+.submenu-group {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: submenuFadeIn 0.4s ease forwards;
+}
+
+.submenu-group:nth-child(2) { animation-delay: 0.05s; }
+.submenu-group:nth-child(3) { animation-delay: 0.1s; }
+.submenu-group:nth-child(4) { animation-delay: 0.15s; }
+
+@keyframes submenuFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu-pagination {
+  transition: opacity 0.3s ease;
+}
+
+.menu-pagination.hidden {
+  opacity: 0;
+  pointer-events: none;
 }

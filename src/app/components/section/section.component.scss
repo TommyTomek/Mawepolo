@@ -1,0 +1,17 @@
+.section {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-blue-night);
+}
+
+.section-content {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  white-space: pre-line; /* preserves line breaks from translations */
+}
